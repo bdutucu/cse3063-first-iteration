@@ -39,6 +39,16 @@ public class CourseRegistrationSystem {
         return null;
     }
 
+
+    public void importDatabase(){
+
+    }
+
+
+    public void updateDatabase(){
+
+    }
+
     public void displayAdvisorMenu() {
         List<Student> advisees = ((Advisor) currentUser).getAdvisees();
 
@@ -176,7 +186,7 @@ public class CourseRegistrationSystem {
 
 
             boolean semesterCourse = !student.getCompletedCourses().contains(course) && course.getSemester() == student.getSemester();
-            /* if student enters a course code which is available for them to select during the particular semester AND
+            /* if student enters a course code which is available for them to select during that particular semester AND
             the course is not already in their course list  */
             if (semesterCourse && courseChoice.equals(course.getCourseCode())
             ) {
